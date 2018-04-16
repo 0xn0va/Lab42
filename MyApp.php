@@ -64,12 +64,17 @@ class Product {
         );
       }
 
+      public function changePrice($newPrice) {
+        return ($this->amount * $this->price);
+      }
+        
       public function changeAmount($newvalue) {
         return ($this->amount * $this->price);
       }
     }
 
 $product = new Product("Edam", 3.3, 120);
+$newAmount = $product->changePrice(4.1);
 $newAmount = $product->changeAmount(245);
 
 ?>
